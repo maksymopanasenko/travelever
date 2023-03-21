@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #72eaff;
+  background: url('./resources/img/clouds-bg.jpg');
 }
 
 code {

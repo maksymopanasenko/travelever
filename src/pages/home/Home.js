@@ -4,8 +4,11 @@ import './Home.css';
 
 function Home() {
     return (
-        <div>
-            <h1>Welcome to TRAVELEVER!</h1>
+        <div className="main-info">
+            <h1>Welcome to <span>TRAVELEVER!</span></h1>
+            <p>The amazing app for city break lovers</p>
+
+            <div className="journey">Choose the destination of your next journey</div>
             
             <div className="btns">
                 <Link to="/button1">
