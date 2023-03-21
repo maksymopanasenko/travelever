@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/travelever-app/static/css/main.0c669309.css",
+    "main.js": "/travelever-app/static/js/main.b6a9e320.js",
+    "static/media/clouds-bg.jpg": "/travelever-app/static/media/clouds-bg.0eeedd43183382883321.jpg",
+    "index.html": "/travelever-app/index.html",
+    "main.0c669309.css.map": "/travelever-app/static/css/main.0c669309.css.map",
+    "main.b6a9e320.js.map": "/travelever-app/static/js/main.b6a9e320.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c669309.css",
+    "static/js/main.b6a9e320.js"
+  ]
+}
