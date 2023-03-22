@@ -29,8 +29,11 @@ function App() {
 
                         <Route path="*" element={<NoPage />} />
                     </Route>
-                </Routes>  
-                
+                </Routes>
+            </div>
+            
+            <div className="footer">
+                Created by Max Opanasenko
             </div>
         </BrowserRouter>
     )

@@ -1,13 +1,11 @@
-.main-info {
+.main__info {
     width: 800px;
     margin: 0 auto;
     background: radial-gradient(circle, rgba(124,211,249,0.6531862745098039) 0%, rgba(141,216,248,0) 99%);
 }
 
-h1 {
+.main__header {
     margin-top: 18vh;
-    color: #ffff00;
-    text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
     font-size: 50px;
 }
 
