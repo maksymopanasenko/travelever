@@ -10,6 +10,7 @@ import NoPage from './pages//nopage/NoPage';
 
 import Manual from "./pages/buttons/Manual";
 import Random from "./pages/buttons/Random";
+import Footer from './Footer';
 
 import './App.css';
 
@@ -32,9 +33,7 @@ function App() {
                 </Routes>
             </div>
             
-            <div className="footer">
-                Created by Max Opanasenko
-            </div>
+            <Footer />
         </BrowserRouter>
     )
 }

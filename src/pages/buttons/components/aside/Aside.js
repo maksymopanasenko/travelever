@@ -1,11 +1,7 @@
-import './Aside.css';
+import '../StyleBlocks.css';
 
-function Aside() {
-    return (
-        <div className="aside">
-            <h3>Aside panel</h3>
-        </div>
-    )
+const Aside = () => {
+    return <div className="aside"></div>
 }
 
 export default Aside;

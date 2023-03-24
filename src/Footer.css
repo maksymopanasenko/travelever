@@ -1,0 +1,7 @@
+.footer {
+    text-align: center;
+    background: radial-gradient(circle, rgb(219, 219, 219)  0%,rgba(255, 255, 255, 0.612) 100%);
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+}

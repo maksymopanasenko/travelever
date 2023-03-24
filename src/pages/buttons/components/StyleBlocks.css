@@ -1,0 +1,19 @@
+.main {
+    width: 65%;
+    text-align: center;    
+    min-height: 400px;
+    background: #000000b0;
+    padding: 15px 10px;
+}
+
+.main ul {
+    padding: 0;
+}
+
+.aside {
+    width: 30%;
+    text-align: center;
+    height: 400px;
+    background: #4b47448f;
+    padding: 15px 10px;
+}
