@@ -1,9 +1,7 @@
 .main {
     width: 65%;
-    text-align: center;    
     min-height: 400px;
-    background: #000000b0;
-    padding: 15px 10px;
+    padding: 0 10px;
 }
 
 .main ul {
@@ -12,8 +10,9 @@
 
 .aside {
     width: 30%;
-    text-align: center;
     height: 400px;
-    background: #4b47448f;
+    background: #fffdfd;
     padding: 15px 10px;
+    box-shadow: 6px 6px 5px rgb(54, 54, 54);
+    border-radius: 5px;
 }

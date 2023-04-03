@@ -6,9 +6,9 @@ function Home() {
     return (
         <div className="main__info">
             <h1 className="main__header">Welcome to <span>TRAVELEVER!</span></h1>
-            <p>The amazing app for city break lovers</p>
+            <h2>The amazing app for city break lovers</h2>
 
-            <div className="journey">Choose the destination of your next journey</div>
+            <h3 className="journey">Choose the destination of your next journey</h3>
             
             <div className="btns">
                 <Link to="/button1">

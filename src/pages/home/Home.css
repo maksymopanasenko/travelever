@@ -1,26 +1,22 @@
-.main__info {
-    width: 800px;
-    margin: 0 auto;
-    background: radial-gradient(circle, rgba(124,211,249,0.6531862745098039) 0%, rgba(141,216,248,0) 99%);
-}
-
 .main__header {
-    margin-top: 18vh;
     font-size: 50px;
+    letter-spacing: 3px;
 }
 
-.main__info p {
+.main__info h2 {
     margin-top: 30px;
     font-size: 30px;
     font-weight: 500;
     color: #fff;
+    letter-spacing: 1.2px;
     text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 .journey {
     margin-top: 80px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 500;    
+    letter-spacing: 1.2px;
     color: #fff;
     text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000;
 }

@@ -1,0 +1,12 @@
+.filter__continents__variants {
+    margin-top: 10px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 190px;
+}
+
+label, input {
+    font-size: 14px;
+    margin-left: 5px;
+}

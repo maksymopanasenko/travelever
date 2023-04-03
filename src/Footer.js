@@ -2,9 +2,9 @@ import "./Footer.css";
 
 function Footer() {
     return (
-        <div className="footer">
+        <footer className="footer">
             © created by Max Opanasenko
-        </div>
+        </footer>
     )
 }
 

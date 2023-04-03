@@ -19,8 +19,9 @@ function App() {
         <BrowserRouter>
             <div className='app'>
                 <Routes>                  
-                    <Route path="/" element={<Layout />}>
+                    <Route path='/' element={<Layout />}>
                         <Route index element={<Home />} />
+                        <Route path='travelever-app' element={<Home />} />
                         <Route path="about" element={<About />} />
                         <Route path="projects" element={<Projects />} />
                         <Route path="contact" element={<Contact />} />
@@ -31,9 +32,10 @@ function App() {
                         <Route path="*" element={<NoPage />} />
                     </Route>
                 </Routes>
+                
+                <Footer />
             </div>
             
-            <Footer />
         </BrowserRouter>
     )
 }

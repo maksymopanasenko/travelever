@@ -5,7 +5,7 @@ import './Layout.css';
 const Layout = () => {
   return (
     <>
-      <div className="header">
+      <header className="header">
         <nav className="menu">
           <ul className="menu__list">
             <li>
@@ -22,7 +22,7 @@ const Layout = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </header>
 
       <Outlet />
     </>
