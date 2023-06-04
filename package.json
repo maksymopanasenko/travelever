@@ -1,6 +1,6 @@
 {
-  "homepage": "http://maksymopanasenko.github.io/travelever-app",
-  "name": "my-app",
+  "homepage": "http://maksymopanasenko.github.io/travelever",
+  "name": "travelever",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,9 +1,9 @@
-.main__header {
+.main__title {
     font-size: 50px;
     letter-spacing: 3px;
 }
 
-.main__info h2 {
+.main__subtitle {
     margin-top: 30px;
     font-size: 30px;
     font-weight: 500;

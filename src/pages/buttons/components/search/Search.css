@@ -1,18 +1,29 @@
 .manual__search {
     width: 100%;
-    height: 70px;
-    padding-top: 20px;
+    /* height: 170px; */
+    padding: 20px 0;
     border-radius: 10px;
     background: #f7ff01;
     box-shadow: 3px 2px 5px rgb(45, 51, 71);
-    position: relative;
 }
 
-.manual__search::before {
+.manual__search-field {    
+    position: relative;
+    padding: 0 150px;
+}
+
+.manual__search-field label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.manual__search-field::before {
     content: "";
     position: absolute;
     left: 210px;
-    top: 22px;
+    top: 37px;
     width: 25px;
     height: 25px;
     background: url('../../../../resources/icons/search.png') center center/cover no-repeat;
@@ -26,3 +37,4 @@
     border: 1px solid black;
     border-radius: 5px;
 }
+
