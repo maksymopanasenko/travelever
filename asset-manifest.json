@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/http//maksymopanasenko.github.io/sichexpress/static/css/main.6409bd7f.css",
-    "main.js": "/http//maksymopanasenko.github.io/sichexpress/static/js/main.d1c9742c.js",
-    "static/media/food-truck.gif": "/http//maksymopanasenko.github.io/sichexpress/static/media/food-truck.324feb5b0b03b94518d2.gif",
-    "static/media/star.png": "/http//maksymopanasenko.github.io/sichexpress/static/media/star.eb23c49161d0f63e85a4.png",
-    "static/media/cossack.png": "/http//maksymopanasenko.github.io/sichexpress/static/media/cossack.9b5a51f7dcbc10dbb53e.png",
-    "index.html": "/http//maksymopanasenko.github.io/sichexpress/index.html",
-    "main.6409bd7f.css.map": "/http//maksymopanasenko.github.io/sichexpress/static/css/main.6409bd7f.css.map",
-    "main.d1c9742c.js.map": "/http//maksymopanasenko.github.io/sichexpress/static/js/main.d1c9742c.js.map"
+    "main.css": "/travelever/static/css/main.ba553b7d.css",
+    "main.js": "/travelever/static/js/main.f0306cbb.js",
+    "static/media/map-bg.jpg": "/travelever/static/media/map-bg.f823296917fcb521334b.jpg",
+    "static/media/hu.jpg": "/travelever/static/media/hu.4f34c70eda253eadae9d.jpg",
+    "static/media/it.jpg": "/travelever/static/media/it.f926578042a6f7347a48.jpg",
+    "static/media/fr.jpg": "/travelever/static/media/fr.f6853fd7321fe518c976.jpg",
+    "static/media/de.jpg": "/travelever/static/media/de.548e93306dfd8099645f.jpg",
+    "static/media/search.png": "/travelever/static/media/search.c905e98ff0993e0b28fd.png",
+    "static/media/star.png": "/travelever/static/media/star.19ecda2f97b8e9dc5aa8.png",
+    "index.html": "/travelever/index.html",
+    "main.ba553b7d.css.map": "/travelever/static/css/main.ba553b7d.css.map",
+    "main.f0306cbb.js.map": "/travelever/static/js/main.f0306cbb.js.map"
   },
   "entrypoints": [
-    "static/css/main.6409bd7f.css",
-    "static/js/main.d1c9742c.js"
+    "static/css/main.ba553b7d.css",
+    "static/js/main.f0306cbb.js"
   ]
 }
