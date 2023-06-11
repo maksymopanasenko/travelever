@@ -6,11 +6,24 @@
 
 .main ul {
     padding: 0;
+    margin-bottom: 25px;
+}
+
+.main__more {
+    background-color: rgb(255, 247, 0);
+    box-shadow:  0 0 4px #000000;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
 }
 
 .aside {
     width: 30%;
-    height: 400px;
+    height: 250px;
     background: #fffdfd;
     padding: 15px 10px;
     box-shadow: 6px 6px 5px rgb(54, 54, 54);

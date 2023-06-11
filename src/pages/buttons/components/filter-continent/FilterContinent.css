@@ -2,11 +2,14 @@
     margin-top: 10px;
     text-align: left;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 190px;
 }
 
-label, input {
-    font-size: 14px;
-    margin-left: 5px;
-}
+label {
+    display: inline-block;
+  }
+  
+  input {
+    margin-right: 10px;
+  }

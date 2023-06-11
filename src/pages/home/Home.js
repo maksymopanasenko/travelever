@@ -10,15 +10,9 @@ function Home() {
 
             <h3 className="journey">Choose the destination of your next journey</h3>
             
-            <div className="btns">
-                <Link to="/button1">
-                    <button>Manualy</button>
-                </Link>
-
-                <Link to="/button2">
-                    <button>Random</button>
-                </Link>
-            </div>
+            <Link to="/start">
+                <button className="main__btn">Start</button>
+            </Link>
 
             <Outlet />
         </div>

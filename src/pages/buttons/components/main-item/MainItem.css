@@ -6,22 +6,29 @@
     background: #e1e1e1da;
     color: #000;
     text-align: left;
-    padding: 5px;    
+    padding: 7px 10px;    
     box-shadow: 2px 2px 4px black;
 }
 
-img {
+li>img {
     width: 100px;
     height: 125px;
     object-fit: cover;
-    border: 1px solid rgb(134, 134, 134);
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
 }
 
 .item__wrapper {
-    width: 370px;
+    width: 415px;
+    text-align: center;
 }
 
 .item__wrapper_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item__wrapper_title div {
     display: flex;
 }
 
@@ -43,15 +50,17 @@ img {
 
 .item__text {
     font-size: 14px;
-    margin-top: 5px;
+    margin: 5px 0 10px;
+    text-align: start;
 }
 
 .item__btn {
-    width: 65px;
-    background-color: rgb(71, 71, 71);
+    background-color: rgba(83,90,218,1);
+    box-shadow: inset 0 0 10px #000000;
     border-radius: 5px;
     color: #fff;
     font-weight: 700;
     border: none;
     cursor: pointer;
+    padding: 5px 40px;
 }

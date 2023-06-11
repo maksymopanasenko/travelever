@@ -16,6 +16,8 @@ const Main = ({data}) => {
             <ul>
                 {elements}
             </ul>
+
+            <button className='main__more'>Load more...</button>
         </div>
     )
 }

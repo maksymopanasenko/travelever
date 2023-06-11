@@ -9,7 +9,6 @@ import Projects from './pages/projects/Projects';
 import NoPage from './pages//nopage/NoPage';
 
 import Manual from "./pages/buttons/Manual";
-import Random from "./pages/buttons/Random";
 import Footer from './Footer';
 
 import './App.css';
@@ -26,8 +25,7 @@ function App() {
                         <Route path="projects" element={<Projects />} />
                         <Route path="contact" element={<Contact />} />
                         
-                        <Route path="button1" element={<Manual />} />
-                        <Route path="button2" element={<Random />} />
+                        <Route path="start" element={<Manual />} />
 
                         <Route path="*" element={<NoPage />} />
                     </Route>
