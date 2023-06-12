@@ -1,4 +1,12 @@
-.filter__continents__variants {
+.filter__continent {
+  margin-bottom: 20px;
+}
+
+.filter__title {
+  font-size: 18px;
+}
+
+.filter__options {
     margin-top: 10px;
     text-align: left;
     display: flex;

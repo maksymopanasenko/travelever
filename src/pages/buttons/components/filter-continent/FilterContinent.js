@@ -1,11 +1,11 @@
 import './FilterContinent.css';
 
+
 const FilterContinent = () => {
     return (
         <div className="filter__continent">
-            <h3>Continents</h3>
-            <div className="filter__continents__variants">
-                
+            <h3 className="filter__title">Continents</h3>
+            <div className="filter__options">
                 <label htmlFor="all">
                     <input type="checkbox" name='all' id="all"/>
                     All
@@ -40,4 +40,22 @@ const FilterContinent = () => {
     )
 }
 
-export default FilterContinent;
+const FilterByPopularity = ({onSort}) => {
+    return (
+        <div className="filter__popular">
+                <h3 className="filter__title">Popularity</h3>
+                <div className="filter__options" onChange={(e) => onSort(e.target)}>
+                    <label htmlFor="increase">
+                        <input type="radio" name='popular' id="increase" data-popular='increase'/>
+                        Most popular
+                    </label>
+                    <label htmlFor="decrease">
+                        <input type="radio" name='popular' id="decrease" data-popular='decrease'/>
+                        Least popular
+                    </label>
+                </div>
+        </div>
+    )
+}
+
+export {FilterContinent, FilterByPopularity};
