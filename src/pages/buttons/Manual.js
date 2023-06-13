@@ -23,13 +23,14 @@ const mainData = [
 
 function Manual() {
     const [data, setData] = useState(mainData);
+    const [term, setTerm] = useState('');
 
     function onSortByPopularity(target) {
         const copyData = data.slice(0);
 
         if (target.nodeName !== 'INPUT') return;
 
-        if (target.dataset.popular == 'increase') {
+        if (target.dataset.popular === 'increase') {
             copyData.sort((a, b) => b.point - a.point);
             setData(copyData);
         } else {
@@ -38,14 +39,32 @@ function Manual() {
         }
     }
 
+    function onUpdateSearch(newTerm) {
+        setTerm(newTerm);
+    }
+
+    function serchEmp(items, term) {
+        if (term.length === 0) {
+            return items;
+        }
+
+        return items.filter(item => {
+
+            let matchPattern = new RegExp(`^${term}`, 'gi');
+
+            return item.city.match(matchPattern);
+        });
+    }
+
+    const searchedData = (serchEmp(data, term));
 
     return  (
         <main className="manual">
             <section>
-                <Search />
+                <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
                     <Aside onSort={onSortByPopularity}/>
-                    <Main data={data}/>
+                    <Main data={searchedData}/>
                 </div>
             </section>
         </main>
