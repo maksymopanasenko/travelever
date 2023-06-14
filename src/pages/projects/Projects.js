@@ -1,6 +1,6 @@
 function Projects() {
     return (
-        <div>
+        <div className="page__content">
             <h1>Projects</h1>
         </div>
     )

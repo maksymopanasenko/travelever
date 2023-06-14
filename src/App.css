@@ -1,10 +1,14 @@
 .app {
     min-height: 100vh;
     text-align: center;
+    overflow-y: scroll;
+}
+
+.page__content {
+    min-height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow-y: scroll;
+    justify-content: center;
 }
 
 h1 {    
