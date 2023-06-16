@@ -1,4 +1,4 @@
-import { FilterContinent, FilterByPopularity } from '../filter-continent/FilterContinent';
+import { FilterContinent, FilterByPopularity } from '../filter-panel/FilterPanel';
 
 import '../StyleBlocks.css';
 

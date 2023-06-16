@@ -18,16 +18,14 @@ function Manual() {
     const [term, setTerm] = useState('');
 
     function onSortByPopularity(target) {
-        const copyData = data.slice(0);
-
         if (target.nodeName !== 'INPUT') return;
 
         if (target.dataset.popular === 'increase') {
-            copyData.sort((a, b) => b.point - a.point);
-            setData(copyData);
+            mainData.sort((a, b) => b.point - a.point);
+            setData(mainData.slice(0, data.length));
         } else {
-            copyData.sort((a, b) => a.point - b.point);
-            setData(copyData);
+            mainData.sort((a, b) => a.point - b.point);
+            setData(mainData.slice(0, data.length));
         }
     }
 
@@ -35,7 +33,7 @@ function Manual() {
         setTerm(newTerm);
     }
 
-    function serchEmp(items, term) {
+    function searchCity(items, term) {
         if (term.length === 0) {
             return items;
         }
@@ -52,7 +50,7 @@ function Manual() {
         setData(mainData);
     }
 
-    const searchedData = (serchEmp(data, term));
+    const searchedData = searchCity(data, term);
 
     return  (
         <main className="manual">
