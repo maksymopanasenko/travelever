@@ -1,5 +1,4 @@
 import MainItem from '../main-item/MainItem';
-import getData from '../../../../db/db';
 
 import '../StyleBlocks.css';
 
@@ -7,7 +6,11 @@ function Button({onUpdateList}) {
     return <button onClick={onUpdateList} className='main__more'>Load more...</button>
 }
 
-const Main = ({data, onUpdateList}) => {
+function Choise() {
+    return <p className='main__choise'>Please select the desired continents to search for.</p>
+}
+
+const Main = ({data, fullData, onUpdateList}) => {
 
     const elements = data.map(item => {
         const {id, ...itemProps} = item;
@@ -19,10 +22,10 @@ const Main = ({data, onUpdateList}) => {
     return (
         <div className="main">
             <ul>
-                {elements}
+                {data.length !== 0 ? elements : <Choise/>}
             </ul>
 
-            {data.length < getData().length ? <Button onUpdateList={onUpdateList}/> : null}
+            {data.length >= 5  && data.length < fullData.length ? <Button onUpdateList={onUpdateList}/> : null}
         </div>
     );
 }

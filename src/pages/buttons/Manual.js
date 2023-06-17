@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Search from "./components/search/Search";
 
@@ -10,22 +10,116 @@ import getData from '../../db/db';
 import './Manual.css';
 
 
-
-const mainData = getData();
-
 function Manual() {
-    const [data, setData] = useState(mainData.slice(0, 5));
+    const [data, setData] = useState([]);
+    const [fullData, setFullData] = useState([]);
     const [term, setTerm] = useState('');
+    
+    const [allChecked, setAllChecked] = useState(true);
+    const [europeChecked, setEuropeChecked] = useState(true);
+    const [asiaChecked, setAsiaChecked] = useState(true);
+    const [africaChecked, setAfricaChecked] = useState(true);
+    const [americaChecked, setAmericaChecked] = useState(true);
+    const [oceaniaChecked, setOceaniaChecked] = useState(true);
+
+    const countiesData = getData();
+
+    useEffect(() => {
+        let selectedCountries = [];
+
+        if (asiaChecked) {
+            selectedCountries = selectedCountries.concat(countiesData.asia);
+        }
+    
+        if (europeChecked) {
+            selectedCountries = selectedCountries.concat(countiesData.europe);
+        }
+
+        if (africaChecked) {
+            selectedCountries = selectedCountries.concat(countiesData.africa);
+        }
+
+        if (americaChecked) {
+            selectedCountries = selectedCountries.concat(countiesData.america);
+        }
+
+        if (oceaniaChecked) {
+            selectedCountries = selectedCountries.concat(countiesData.oceania);
+        }
+    
+        setData(selectedCountries.slice(0, 5));
+        setFullData(selectedCountries);
+
+        // eslint-disable-next-line
+    }, [europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]);
+
+    useEffect(() => {
+        if (!europeChecked || !asiaChecked || !americaChecked || !africaChecked || !oceaniaChecked) {
+            setAllChecked(false);
+        } else {
+            setAllChecked(true);
+        }
+    }, [europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]);
+  
+    const handleAllChange = (e) => {
+        const { checked } = e.target;
+        setAllChecked(checked);
+        setEuropeChecked(checked);
+        setAsiaChecked(checked);
+        setAfricaChecked(checked);
+        setAmericaChecked(checked);
+        setOceaniaChecked(checked);
+    };
+  
+    const handleCountryChange = (e) => {
+      const { name, checked } = e.target;
+      switch (name) {
+        case 'europe':
+          setEuropeChecked(checked);
+          if (!checked) {
+            setAllChecked(false);
+          }
+          break;
+        case 'asia':
+          setAsiaChecked(checked);
+          if (!checked) {
+            setAllChecked(false);
+          }
+          break;
+        case 'africa':
+          setAfricaChecked(checked);
+          if (!checked) {
+            setAllChecked(false);
+          }
+          break;
+        case 'america':
+          setAmericaChecked(checked);
+          if (!checked) {
+            setAllChecked(false);
+          }
+          break;
+        case 'oceania':
+          setOceaniaChecked(checked);
+          if (!checked) {
+            setAllChecked(false);
+          }
+          break;
+        default:
+          break;
+      }
+    };
 
     function onSortByPopularity(target) {
         if (target.nodeName !== 'INPUT') return;
 
         if (target.dataset.popular === 'increase') {
-            mainData.sort((a, b) => b.point - a.point);
-            setData(mainData.slice(0, data.length));
+            const newArr = fullData.slice(0);
+            newArr.sort((a, b) => b.point - a.point);
+            setData(newArr.slice(0, 5));
         } else {
-            mainData.sort((a, b) => a.point - b.point);
-            setData(mainData.slice(0, data.length));
+            const newArr = fullData.slice(0);
+            newArr.sort((a, b) => a.point - b.point);
+            setData(newArr.slice(0, 5));
         }
     }
 
@@ -38,7 +132,7 @@ function Manual() {
             return items;
         }
 
-        return mainData.filter(item => {
+        return data.filter(item => {
 
             let matchPattern = new RegExp(`^${term}`, 'gi');
 
@@ -47,7 +141,7 @@ function Manual() {
     }
 
     function onUpdateList() {
-        setData(mainData);
+        setData(fullData);
     }
 
     const searchedData = searchCity(data, term);
@@ -57,8 +151,8 @@ function Manual() {
             <section>
                 <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
-                    <Aside onSort={onSortByPopularity}/>
-                    <Main data={searchedData} onUpdateList={onUpdateList}/>
+                    <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
+                    <Main data={searchedData} fullData={fullData} onUpdateList={onUpdateList}/>
                 </div>
             </section>
         </main>
