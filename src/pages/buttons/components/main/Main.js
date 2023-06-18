@@ -6,11 +6,11 @@ function Button({onUpdateList}) {
     return <button onClick={onUpdateList} className='main__more'>Load more...</button>
 }
 
-function Choise() {
-    return <p className='main__choise'>Please select the desired continents to search for.</p>
+function Choise({term}) {
+    return <p className='main__choise'>{term.length === 0 ? "Please select the desired continents to search for." : "Nothing found. Try changing filters or changing the data you entered."}</p>
 }
 
-const Main = ({data, fullData, onUpdateList}) => {
+const Main = ({data, fullData, term, onUpdateList}) => {
 
     const elements = data.map(item => {
         const {id, ...itemProps} = item;
@@ -22,7 +22,7 @@ const Main = ({data, fullData, onUpdateList}) => {
     return (
         <div className="main">
             <ul>
-                {data.length !== 0 ? elements : <Choise/>}
+                {data.length !== 0 ? elements : <Choise term={term}/>}
             </ul>
 
             {data.length >= 5  && data.length < fullData.length ? <Button onUpdateList={onUpdateList}/> : null}

@@ -14,6 +14,7 @@ function Manual() {
     const [data, setData] = useState([]);
     const [fullData, setFullData] = useState([]);
     const [term, setTerm] = useState('');
+    const [target, setTarget] = useState(null);
     
     const [allChecked, setAllChecked] = useState(true);
     const [europeChecked, setEuropeChecked] = useState(true);
@@ -49,6 +50,9 @@ function Manual() {
     
         setData(selectedCountries.slice(0, 5));
         setFullData(selectedCountries);
+        if (target !== null) {
+            sortSmth(selectedCountries);
+        }
 
         // eslint-disable-next-line
     }, [europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]);
@@ -110,6 +114,8 @@ function Manual() {
     };
 
     function onSortByPopularity(target) {
+        setTarget(target);
+
         if (target.nodeName !== 'INPUT') return;
 
         if (target.dataset.popular === 'increase') {
@@ -123,16 +129,35 @@ function Manual() {
         }
     }
 
+    function sortSmth(arr) {
+        
+        if (target.dataset.popular === 'increase') {
+            const newArr = arr.slice(0);
+            newArr.sort((a, b) => b.point - a.point);
+            if (arr === fullData) {
+                setData(newArr);
+            } else {
+                setData(newArr.slice(0, 5));
+            }
+        } else {
+            const newArr = arr.slice(0);
+            newArr.sort((a, b) => a.point - b.point);
+            if (arr === fullData) {
+                setData(newArr);
+            } else {
+                setData(newArr.slice(0, 5));
+            }
+        }
+    }
+
     function onUpdateSearch(newTerm) {
         setTerm(newTerm);
     }
 
     function searchCity(items, term) {
-        if (term.length === 0) {
-            return items;
-        }
+        if (term.length === 0) return items;
 
-        return data.filter(item => {
+        return fullData.filter(item => {
 
             let matchPattern = new RegExp(`^${term}`, 'gi');
 
@@ -141,7 +166,11 @@ function Manual() {
     }
 
     function onUpdateList() {
-        setData(fullData);
+        if (target !== null) {
+            sortSmth(fullData);
+        } else {
+            setData(fullData);
+        }
     }
 
     const searchedData = searchCity(data, term);
@@ -152,7 +181,7 @@ function Manual() {
                 <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
                     <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
-                    <Main data={searchedData} fullData={fullData} onUpdateList={onUpdateList}/>
+                    <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList}/>
                 </div>
             </section>
         </main>
