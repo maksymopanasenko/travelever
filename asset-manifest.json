@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/travelever/static/css/main.ec14079c.css",
-    "main.js": "/travelever/static/js/main.8290a6d9.js",
+    "main.css": "/travelever/static/css/main.7274f459.css",
+    "main.js": "/travelever/static/js/main.cb0dbd1b.js",
     "static/media/map-bg.jpg": "/travelever/static/media/map-bg.f823296917fcb521334b.jpg",
+    "static/media/sydney.jpg": "/travelever/static/media/sydney.5dab4366a4390174b87e.jpg",
     "static/media/hu.jpg": "/travelever/static/media/hu.4f34c70eda253eadae9d.jpg",
     "static/media/it.jpg": "/travelever/static/media/it.f926578042a6f7347a48.jpg",
+    "static/media/dubai.jpg": "/travelever/static/media/dubai.c144eed17d1e895661ce.jpg",
     "static/media/fr.jpg": "/travelever/static/media/fr.f6853fd7321fe518c976.jpg",
+    "static/media/mr.jpg": "/travelever/static/media/mr.2a3ef75221fa0ca53c40.jpg",
+    "static/media/bangkok.jpg": "/travelever/static/media/bangkok.41bc425effd9c18eeabb.jpg",
+    "static/media/agra.jpg": "/travelever/static/media/agra.579b29155c5f0dcfb3e7.jpg",
     "static/media/de.jpg": "/travelever/static/media/de.548e93306dfd8099645f.jpg",
     "static/media/athens.jpg": "/travelever/static/media/athens.260e3d7239713ead17ff.jpg",
+    "static/media/nyc.jpg": "/travelever/static/media/nyc.2f3519c617c49ec0b204.jpg",
     "static/media/search.png": "/travelever/static/media/search.c905e98ff0993e0b28fd.png",
     "static/media/star.png": "/travelever/static/media/star.19ecda2f97b8e9dc5aa8.png",
     "index.html": "/travelever/index.html",
-    "main.ec14079c.css.map": "/travelever/static/css/main.ec14079c.css.map",
-    "main.8290a6d9.js.map": "/travelever/static/js/main.8290a6d9.js.map"
+    "main.7274f459.css.map": "/travelever/static/css/main.7274f459.css.map",
+    "main.cb0dbd1b.js.map": "/travelever/static/js/main.cb0dbd1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec14079c.css",
-    "static/js/main.8290a6d9.js"
+    "static/css/main.7274f459.css",
+    "static/js/main.cb0dbd1b.js"
   ]
 }
