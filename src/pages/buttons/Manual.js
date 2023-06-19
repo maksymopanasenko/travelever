@@ -15,6 +15,7 @@ function Manual() {
     const [fullData, setFullData] = useState([]);
     const [term, setTerm] = useState('');
     const [target, setTarget] = useState(null);
+    const [chunk, setChunk] = useState(10);
     
     const [allChecked, setAllChecked] = useState(true);
     const [europeChecked, setEuropeChecked] = useState(true);
@@ -24,6 +25,10 @@ function Manual() {
     const [oceaniaChecked, setOceaniaChecked] = useState(true);
 
     const countiesData = getData();
+
+    useEffect(() => {
+        setChunk(10);
+    }, [target]);
 
     useEffect(() => {
         let selectedCountries = [];
@@ -50,6 +55,7 @@ function Manual() {
     
         setData(selectedCountries.slice(0, 5));
         setFullData(selectedCountries);
+        setChunk(10);
         if (target !== null) {
             sortSmth(selectedCountries);
         }
@@ -63,6 +69,8 @@ function Manual() {
         } else {
             setAllChecked(true);
         }
+
+        setChunk(10);
     }, [europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]);
   
     const handleAllChange = (e) => {
@@ -134,19 +142,11 @@ function Manual() {
         if (target.dataset.popular === 'increase') {
             const newArr = arr.slice(0);
             newArr.sort((a, b) => b.point - a.point);
-            if (arr === fullData) {
-                setData(newArr);
-            } else {
-                setData(newArr.slice(0, 5));
-            }
+            setData(newArr.slice(0, chunk));
         } else {
             const newArr = arr.slice(0);
             newArr.sort((a, b) => a.point - b.point);
-            if (arr === fullData) {
-                setData(newArr);
-            } else {
-                setData(newArr.slice(0, 5));
-            }
+            setData(newArr.slice(0, chunk));
         }
     }
 
@@ -166,10 +166,11 @@ function Manual() {
     }
 
     function onUpdateList() {
+        setChunk(c => c + 5);
         if (target !== null) {
             sortSmth(fullData);
         } else {
-            setData(fullData);
+            setData(fullData.slice(0, chunk));
         }
     }
 
