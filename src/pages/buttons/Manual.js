@@ -156,6 +156,13 @@ function Manual() {
 
     function searchCity(items, term) {
         if (term.length === 0) return items;
+        
+        const englishLettersRegex = /^[A-Za-z]+$/;
+
+        console.log(englishLettersRegex.test(term));
+        if (!englishLettersRegex.test(term)) {
+            return items;
+        }
 
         return fullData.filter(item => {
 

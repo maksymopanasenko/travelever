@@ -16,6 +16,10 @@ import prague from '../resources/img/prague.jpg';
 import barcelona from '../resources/img/barcelona.jpg';
 import vienna from '../resources/img/vienna.jpg';
 import krakow from '../resources/img/krakow.jpg';
+import singapore from '../resources/img/singapore.jpg';
+import tokyo from '../resources/img/tokyo.jpg';
+import mumbai from '../resources/img/mumbai.jpg';
+import seoul from '../resources/img/seoul.jpg';
 
 export default function getData() {
     return {
@@ -34,8 +38,12 @@ export default function getData() {
             ],
             asia: [
                 {img: bangkok, city: "Bangkok", point: 10, country: "Thailand", id: '1as'},
-                {img: dubai, city: "Dubai", point: 9, country: "UAE", id: '2as'},
+                {img: dubai, city: "Dubai", point: 10, country: "UAE", id: '2as'},
                 {img: india, city: "Agra", point: 8, country: "India", id: '3as'},
+                {img: singapore, city: "Singapore", point: 9, country: "Singapore", id: '4as'},
+                {img: tokyo, city: "Tokyo", point: 8, country: "Japan", id: '5as'},
+                {img: mumbai, city: "Mumbai", point: 6, country: "India", id: '6as'},
+                {img: seoul, city: "Seoul", point: 7, country: "South Korea", id: '7as'},
             ],
             africa: [
                 {img: marrakesh, city: "Marrakesh", point: 8, country: "Marocco", id: '1af'},
