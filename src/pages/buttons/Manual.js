@@ -9,10 +9,13 @@ import getData from '../../db/db';
 
 import './Manual.css';
 
+const countriesData = getData();
+const allCountries = [...countriesData.asia, ...countriesData.africa, ...countriesData.europe, ...countriesData.america, ...countriesData.oceania];
 
 function Manual() {
     const [data, setData] = useState([]);
     const [fullData, setFullData] = useState([]);
+    const [initialData, setInitialData] = useState(allCountries);
     const [term, setTerm] = useState('');
     const [target, setTarget] = useState(null);
     const [chunk, setChunk] = useState(10);
@@ -24,8 +27,6 @@ function Manual() {
     const [americaChecked, setAmericaChecked] = useState(true);
     const [oceaniaChecked, setOceaniaChecked] = useState(true);
 
-    const countiesData = getData();
-
     useEffect(() => {
         setChunk(10);
     }, [target]);
@@ -34,23 +35,23 @@ function Manual() {
         let selectedCountries = [];
 
         if (asiaChecked) {
-            selectedCountries = selectedCountries.concat(countiesData.asia);
+            selectedCountries = selectedCountries.concat(countriesData.asia);
         }
     
         if (europeChecked) {
-            selectedCountries = selectedCountries.concat(countiesData.europe);
+            selectedCountries = selectedCountries.concat(countriesData.europe);
         }
 
         if (africaChecked) {
-            selectedCountries = selectedCountries.concat(countiesData.africa);
+            selectedCountries = selectedCountries.concat(countriesData.africa);
         }
 
         if (americaChecked) {
-            selectedCountries = selectedCountries.concat(countiesData.america);
+            selectedCountries = selectedCountries.concat(countriesData.america);
         }
 
         if (oceaniaChecked) {
-            selectedCountries = selectedCountries.concat(countiesData.oceania);
+            selectedCountries = selectedCountries.concat(countriesData.oceania);
         }
     
         setData(selectedCountries.slice(0, 5));
@@ -116,7 +117,7 @@ function Manual() {
             setAllChecked(false);
           }
           break;
-        default:
+          default:
           break;
       }
     };
@@ -181,6 +182,20 @@ function Manual() {
         }
     }
 
+    const onSwitchFavorite = (key) => {
+
+        const newFullData = initialData.map(item => {
+            if (item.id === key) {
+                item.favorite = !item.favorite;
+                return item;
+            } else {
+                return item;
+            }
+        });
+
+        setInitialData(newFullData);
+    }
+
     const searchedData = searchCity(data, term);
 
     return  (
@@ -189,7 +204,7 @@ function Manual() {
                 <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
                     <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
-                    <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList}/>
+                    <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite}/>
                 </div>
             </section>
         </main>

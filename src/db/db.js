@@ -24,36 +24,36 @@ import seoul from '../resources/img/seoul.jpg';
 export default function getData() {
     return {
             europe: [
-                {img: france, city: "Paris", point: 10, country: "France", id: '1eu'},
-                {img: hungary, city: "Budapest", point: 5, country: "Hungary", id: '2eu'},
-                {img: italy, city: "Rome", point: 9, country: "Italy", id: '3eu'},
-                {img: germany, city: "Berlin", point: 6, country: "Germany", id: '4eu'},
-                {img: greece, city: "Athens", point: 8, country: "Greece", id: '5eu'},
-                {img: london, city: "London", point: 10, country: "Great Britain", id: '6eu'},
-                {img: istanbul, city: "Istanbul", point: 9, country: "Turkey", id: '7eu'},
-                {img: prague, city: "Prague", point: 8, country: "Czech Republic", id: '8eu'},
-                {img: barcelona, city: "Barcelona", point: 7, country: "Spain", id: '9eu'},
-                {img: vienna, city: "Vienna", point: 6, country: "Austria", id: '10eu'},
-                {img: krakow, city: "Krakow", point: 3, country: "Poland", id: '11eu'},
+                {img: france, city: "Paris", point: 10, country: "France", favorite: false, id: '1eu'},
+                {img: hungary, city: "Budapest", point: 5, country: "Hungary", favorite: false, id: '2eu'},
+                {img: italy, city: "Rome", point: 9, country: "Italy", favorite: false, id: '3eu'},
+                {img: germany, city: "Berlin", point: 6, country: "Germany", favorite: false, id: '4eu'},
+                {img: greece, city: "Athens", point: 8, country: "Greece", favorite: false, id: '5eu'},
+                {img: london, city: "London", point: 10, country: "Great Britain", favorite: false, id: '6eu'},
+                {img: istanbul, city: "Istanbul", point: 9, country: "Turkey", favorite: false, id: '7eu'},
+                {img: prague, city: "Prague", point: 8, country: "Czech Republic", favorite: false, id: '8eu'},
+                {img: barcelona, city: "Barcelona", point: 7, country: "Spain", favorite: false, id: '9eu'},
+                {img: vienna, city: "Vienna", point: 6, country: "Austria", favorite: false, id: '10eu'},
+                {img: krakow, city: "Krakow", point: 3, country: "Poland", favorite: false, id: '11eu'},
             ],
             asia: [
-                {img: bangkok, city: "Bangkok", point: 10, country: "Thailand", id: '1as'},
-                {img: dubai, city: "Dubai", point: 10, country: "UAE", id: '2as'},
-                {img: india, city: "Agra", point: 8, country: "India", id: '3as'},
-                {img: singapore, city: "Singapore", point: 9, country: "Singapore", id: '4as'},
-                {img: tokyo, city: "Tokyo", point: 8, country: "Japan", id: '5as'},
-                {img: mumbai, city: "Mumbai", point: 6, country: "India", id: '6as'},
-                {img: seoul, city: "Seoul", point: 7, country: "South Korea", id: '7as'},
+                {img: bangkok, city: "Bangkok", point: 10, country: "Thailand", favorite: false, id: '1as'},
+                {img: dubai, city: "Dubai", point: 10, country: "UAE", favorite: false, id: '2as'},
+                {img: india, city: "Agra", point: 8, country: "India", favorite: false, id: '3as'},
+                {img: singapore, city: "Singapore", point: 9, country: "Singapore", favorite: false, id: '4as'},
+                {img: tokyo, city: "Tokyo", point: 8, country: "Japan", favorite: false, id: '5as'},
+                {img: mumbai, city: "Mumbai", point: 6, country: "India", favorite: false, id: '6as'},
+                {img: seoul, city: "Seoul", point: 7, country: "South Korea", favorite: false, id: '7as'},
             ],
             africa: [
-                {img: marrakesh, city: "Marrakesh", point: 8, country: "Marocco", id: '1af'},
-                {img: cairo, city: "Cairo", point: 8, country: "Egipt", id: '2af'},
+                {img: marrakesh, city: "Marrakesh", point: 8, country: "Marocco", favorite: false, id: '1af'},
+                {img: cairo, city: "Cairo", point: 8, country: "Egipt", favorite: false, id: '2af'},
             ],
             america: [
-                {img: nyc, city: "New York", point: 10, country: "USA", id: '1am'},
+                {img: nyc, city: "New York", point: 10, country: "USA", favorite: false, id: '1am'},
             ],
             oceania: [
-                {img: sydney, city: "Sydney", point: 7, country: "Australia", id: '1oc'}
+                {img: sydney, city: "Sydney", point: 7, country: "Australia", favorite: false, id: '1oc'}
             ],
         }
 }

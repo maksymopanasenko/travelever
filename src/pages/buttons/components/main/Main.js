@@ -10,12 +10,13 @@ function Choise({term}) {
     return <p className='main__choise'>{term.length === 0 ? "Please select the desired continents to search for." : "Nothing found. Try changing filters or changing the data you entered."}</p>
 }
 
-const Main = ({data, fullData, term, onUpdateList}) => {
+const Main = ({data, fullData, term, onUpdateList, onSwitchFavorite}) => {
 
     const elements = data.map(item => {
         const {id, ...itemProps} = item;
+
         return (
-            <MainItem key={id} {...itemProps}/>
+            <MainItem key={id} id={id} {...itemProps} onSwitchFavorite={onSwitchFavorite}/>
         )
     });
 
