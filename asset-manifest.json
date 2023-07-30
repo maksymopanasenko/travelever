@@ -1,27 +1,39 @@
 {
   "files": {
     "main.css": "/travelever/static/css/main.7274f459.css",
-    "main.js": "/travelever/static/js/main.cb0dbd1b.js",
+    "main.js": "/travelever/static/js/main.dae1fd6c.js",
     "static/media/map-bg.jpg": "/travelever/static/media/map-bg.f823296917fcb521334b.jpg",
     "static/media/sydney.jpg": "/travelever/static/media/sydney.5dab4366a4390174b87e.jpg",
     "static/media/hu.jpg": "/travelever/static/media/hu.4f34c70eda253eadae9d.jpg",
+    "static/media/tokyo.jpg": "/travelever/static/media/tokyo.8e26c72567e6906e2562.jpg",
+    "static/media/istanbul.jpg": "/travelever/static/media/istanbul.9e0d63761aa3c9a5cd56.jpg",
     "static/media/it.jpg": "/travelever/static/media/it.f926578042a6f7347a48.jpg",
+    "static/media/singapore.jpg": "/travelever/static/media/singapore.dfb5377dcd0778f5b518.jpg",
     "static/media/dubai.jpg": "/travelever/static/media/dubai.c144eed17d1e895661ce.jpg",
+    "static/media/barcelona.jpg": "/travelever/static/media/barcelona.34db225e268d39c82e48.jpg",
+    "static/media/mumbai.jpg": "/travelever/static/media/mumbai.f1a5afece676bcde6f24.jpg",
+    "static/media/prague.jpg": "/travelever/static/media/prague.234b6b76fba59d25beeb.jpg",
     "static/media/fr.jpg": "/travelever/static/media/fr.f6853fd7321fe518c976.jpg",
     "static/media/mr.jpg": "/travelever/static/media/mr.2a3ef75221fa0ca53c40.jpg",
     "static/media/bangkok.jpg": "/travelever/static/media/bangkok.41bc425effd9c18eeabb.jpg",
+    "static/media/seoul.jpg": "/travelever/static/media/seoul.e52fd1a44e26e7b06f2b.jpg",
+    "static/media/vienna.jpg": "/travelever/static/media/vienna.0bf63d889ea6e5acf506.jpg",
     "static/media/agra.jpg": "/travelever/static/media/agra.579b29155c5f0dcfb3e7.jpg",
     "static/media/de.jpg": "/travelever/static/media/de.548e93306dfd8099645f.jpg",
+    "static/media/krakow.jpg": "/travelever/static/media/krakow.8ec94c68ab4eda8e8f4b.jpg",
     "static/media/athens.jpg": "/travelever/static/media/athens.260e3d7239713ead17ff.jpg",
+    "static/media/cairo.jpg": "/travelever/static/media/cairo.c0c6d5b2e456deb17546.jpg",
     "static/media/nyc.jpg": "/travelever/static/media/nyc.2f3519c617c49ec0b204.jpg",
+    "static/media/london.jpg": "/travelever/static/media/london.76f23e639583a5ae49e3.jpg",
+    "static/media/star-active.png": "/travelever/static/media/star-active.f994a89a7495d9471646.png",
     "static/media/search.png": "/travelever/static/media/search.c905e98ff0993e0b28fd.png",
     "static/media/star.png": "/travelever/static/media/star.19ecda2f97b8e9dc5aa8.png",
     "index.html": "/travelever/index.html",
     "main.7274f459.css.map": "/travelever/static/css/main.7274f459.css.map",
-    "main.cb0dbd1b.js.map": "/travelever/static/js/main.cb0dbd1b.js.map"
+    "main.dae1fd6c.js.map": "/travelever/static/js/main.dae1fd6c.js.map"
   },
   "entrypoints": [
     "static/css/main.7274f459.css",
-    "static/js/main.cb0dbd1b.js"
+    "static/js/main.dae1fd6c.js"
   ]
 }
