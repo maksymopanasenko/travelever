@@ -3,7 +3,7 @@ import starInit from '../../../../resources/icons/star.png';
 import starActive from '../../../../resources/icons/star-active.png';
 
 const MainItem = (props) => {
-    const {id, img, city, point, country, favorite, onSwitchFavorite} = props;
+    const {id, img, city, point, country, favorite, onSwitchFavorite, onShowCard} = props;
 
     const star = favorite ? starActive : starInit;
 
@@ -20,7 +20,7 @@ const MainItem = (props) => {
                 </div>
                 <p className="item__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quibusdam ipsam, cupiditate natus deleniti iure libero aut ea mollitia obcaecati itaque laudant.</p>
                 
-                <button className="item__btn">Select</button>
+                <button className="item__btn" onClick={() => onShowCard(id)}>Select</button>
             </div>
         </li>
     )

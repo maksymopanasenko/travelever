@@ -4,6 +4,7 @@ import Search from "./components/search/Search";
 
 import Aside from "./components/aside/Aside";
 import Main from "./components/main/Main";
+import Overlay from './components/card/Card';
 
 import getData from '../../db/db';
 
@@ -26,6 +27,7 @@ function Manual() {
     const [africaChecked, setAfricaChecked] = useState(true);
     const [americaChecked, setAmericaChecked] = useState(true);
     const [oceaniaChecked, setOceaniaChecked] = useState(true);
+    const [card, setCard] = useState(null);
 
     useEffect(() => {
         setChunk(10);
@@ -182,6 +184,15 @@ function Manual() {
         }
     }
 
+    function onClose() {
+        setCard(null);
+    }
+
+    function onShowCard(id) {
+        const choosedCard = initialData.find(item => item.id === id);
+        setCard(choosedCard);
+    } 
+
     const onSwitchFavorite = (key) => {
 
         const newFullData = initialData.map(item => {
@@ -200,11 +211,12 @@ function Manual() {
 
     return  (
         <main className="manual">
+            <Overlay cardData={card} onClose={onClose}/>
             <section>
                 <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
                     <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
-                    <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite}/>
+                    <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite} onShowCard={onShowCard}/>
                 </div>
             </section>
         </main>
