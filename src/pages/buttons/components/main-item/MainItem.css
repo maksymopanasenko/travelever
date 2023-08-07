@@ -1,4 +1,4 @@
-.main li {
+.main__item {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -10,7 +10,7 @@
     box-shadow: 2px 2px 4px black;
 }
 
-li>img {
+.main__item>img {
     width: 100px;
     height: 125px;
     object-fit: cover;
@@ -41,6 +41,7 @@ li>img {
 
 .item__title {
     font-size: 18px;
+    font-weight: 500;
 }
 
 .item__title span {

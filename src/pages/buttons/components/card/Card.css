@@ -7,50 +7,106 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: #00000080;
+    background: #00000043;
     z-index: 10;
 }
 
 .card {
     position: relative;
-    width: 600px;
-    padding: 20px;
-    background: rgb(83,90,218);
+    width: 650px;
+    padding: 10px;
+    background: center/cover no-repeat;
     color: #fff;
     box-shadow: 3px 3px 6px #000;
 }
 
-.card__title {
+.card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(58, 58, 58, 0.575);
+    z-index: 11;
+}
+
+.card__content {
+    background: #3535357d;
+    padding: 20px;
     position: relative;
-    font-size: 20px;
-    margin-bottom: 15px;
+    box-shadow: 0 0 10px #353535;
+    z-index: 13;
+}
+
+.card__title {
+    font-size: 35px;
+    margin-bottom: 10px;
     font-weight: 700;
 }
 
-.card__title::before,
-.card__title::after {
+.card__title span {
+    position: relative;
+}
+
+.card__title span::before,
+.card__title span::after {
     content: '';
     position: absolute;
-    left: 220px;
+    left: -30px;
     top: 50%;
     transform: translateY(-50%);
     height: 1px;
-    width: 10px;
+    width: 15px;
     background: #fff;
 }
 
-.card__title::after {
+.card__title span::after {
     left: unset;
-    right: 220px;
+    right: -30px;
 }
 
 .card__body {
     display: flex;
-    gap: 15px;
+    gap: 30px;
 }
 
 .card__img {
     height: 200px;
+    max-width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.card__charts {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.card__label {
+    font-weight: 500;
+}
+
+.card__icon {
+    width: 25px;
+    height: 25px;
+}
+
+.card__description {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.card__btn {
+    padding: 10px 35px;
+    background: #f7ff01;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px black;
+    text-transform: uppercase;
 }
 
 .card__close {
@@ -62,6 +118,14 @@
     background: #ff0000;
     font-weight: 700;
     color: #000;
-    z-index: 11;
     box-shadow: 1px 1px 3px #000;
+    border-radius: 2px;
+    z-index: 12;
+}
+
+.divider {
+    margin: 0 auto;
+    width: 300px;
+    border-top: 2px solid #fff;
+    margin-bottom: 35px;
 }

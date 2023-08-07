@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import favorite from '../../../../resources/icons/favorite.png';
+import search from '../../../../resources/icons/search.png';
 import './Search.css';
 
 function Search({onSearch}) {
@@ -15,12 +16,16 @@ function Search({onSearch}) {
     return (
         <div className="manual__search">
             <div className="manual__search-field">
-                <label htmlFor="search">Quick search</label>
-                <input type="text"
-                    id='search'
-                    placeholder='Start to type a city...'
-                    value={term}
-                    onChange={onUpdateSearch}/>
+                <div className="manual__search-box">
+                    <div className="search__box">
+                        <img src={search} alt="search" className='search__img'/>
+                    </div>
+                    <input type="text"
+                        id='search'
+                        placeholder='Start to type a city...'
+                        value={term}
+                        onChange={onUpdateSearch}/>
+                </div>
             </div>
             <button className="manual__favorite">
                 <img src={favorite} alt="star" />

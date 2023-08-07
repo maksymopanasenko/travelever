@@ -8,7 +8,7 @@ const MainItem = (props) => {
     const star = favorite ? starActive : starInit;
 
     return (
-        <li>
+        <li className='main__item'>
             <img src={img} alt={city} />
             <div className="item__wrapper">
                 <div className="item__wrapper_title">
