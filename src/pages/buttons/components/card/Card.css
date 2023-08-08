@@ -101,12 +101,23 @@
 }
 
 .card__btn {
-    padding: 10px 35px;
+    padding: 10px 25px;
     background: #f7ff01;
     color: #000;
     border-radius: 5px;
     box-shadow: 0 2px 5px black;
     text-transform: uppercase;
+    display: inline-block;
+    transition: .2s;
+}
+
+.card__btn:last-child {
+    margin-left: 15px;
+}
+
+.card__btn:hover {
+    background-color: #ffd500;
+    color: #fff;
 }
 
 .card__close {

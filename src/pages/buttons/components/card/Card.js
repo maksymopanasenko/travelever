@@ -4,8 +4,11 @@ import monument from '../../../../resources/icons/characteristics/historic-site.
 import shield from '../../../../resources/icons/characteristics/security.png';
 
 const Card = ({choosedCard}) => {
+    const {selectedValue} = choosedCard;
     if (!choosedCard.cardData) return;
-    const {city, img, characteristics} = choosedCard.cardData;
+    const {city, img, flightId, characteristics} = choosedCard.cardData;
+
+    const currMonth = new Date().getMonth() + 1;
 
     return (
         <div className='card' style={{backgroundImage: 'url(' + img + ')'}}>
@@ -18,7 +21,8 @@ const Card = ({choosedCard}) => {
                     <div className="card__wrapper">
                         <Chars characteristics={characteristics}/>
                         <p className='card__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro quae quo numquam repellendus pariatur sint hic dolorum voluptatibus accusantium magni ullam officiis, sit voluptate et nihil, quas ipsa velit.</p>
-                        <button className="card__btn">Add</button>
+                        <a href={'https://www.skyscanner.pl/transport/loty/' + selectedValue + '/' + flightId + '/?adultsv2=1&cabinclass=economy&childrenv2=&ref=home&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false&oym=230' + currMonth + '&qp_prevScreen=HOMEPAGE&selectedoday=08'} target='blank' className="card__btn">View flights</a>
+                        <a href='https://www.booking.com/' target='blank' className="card__btn">View hotels</a>
                     </div>
                 </div>
             </div>

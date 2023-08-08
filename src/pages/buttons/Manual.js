@@ -13,7 +13,9 @@ import './Manual.css';
 const countriesData = getData();
 const allCountries = [...countriesData.asia, ...countriesData.africa, ...countriesData.europe, ...countriesData.america, ...countriesData.oceania];
 
-function Manual() {
+function Manual({selectedValue}) {
+
+    // console.log(selectedValue);
     const [data, setData] = useState([]);
     const [fullData, setFullData] = useState([]);
     const [initialData, setInitialData] = useState(allCountries);
@@ -211,8 +213,8 @@ function Manual() {
 
     return  (
         <main className="manual">
-            <Overlay cardData={card} onClose={onClose}/>
-            <section>
+            <Overlay cardData={card} onClose={onClose} selectedValue={selectedValue}/>
+            <section className='manual__content'>
                 <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
                     <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>

@@ -1,7 +1,8 @@
-.manual {
-    min-height: calc(100vh - 70px - 100px);
+.manual__content {
+    padding: 50px 0 20px 0;
+    min-height: calc(100vh - 120px);
     width: 900px;
-    margin: 50px auto 20px auto;
+    margin: 0 auto;
 }
 
 .manual__window {
