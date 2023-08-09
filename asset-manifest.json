@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/travelever/static/css/main.c28e9876.css",
-    "main.js": "/travelever/static/js/main.a1d597b4.js",
-    "static/media/tourist-supplies-green.webp": "/travelever/static/media/tourist-supplies-green.8bacbd10d026ab9a7adc.webp",
+    "main.css": "/travelever/static/css/main.1ca3c552.css",
+    "main.js": "/travelever/static/js/main.0063596d.js",
+    "static/media/wallpaperbetter.webp": "/travelever/static/media/wallpaperbetter.e51c1213e7de75d97163.webp",
     "static/media/map-bg.jpg": "/travelever/static/media/map-bg.f823296917fcb521334b.jpg",
     "static/media/sydney.jpg": "/travelever/static/media/sydney.5dab4366a4390174b87e.jpg",
     "static/media/hu.jpg": "/travelever/static/media/hu.4f34c70eda253eadae9d.jpg",
@@ -27,14 +27,15 @@
     "static/media/nyc.jpg": "/travelever/static/media/nyc.2f3519c617c49ec0b204.jpg",
     "static/media/favorite.png": "/travelever/static/media/favorite.8e9cf0758df8ce5c6916.png",
     "static/media/london.jpg": "/travelever/static/media/london.76f23e639583a5ae49e3.jpg",
+    "static/media/globe.png": "/travelever/static/media/globe.cb12cdb593dee097e729.png",
     "static/media/star-active.png": "/travelever/static/media/star-active.f994a89a7495d9471646.png",
     "static/media/star.png": "/travelever/static/media/star.19ecda2f97b8e9dc5aa8.png",
     "index.html": "/travelever/index.html",
-    "main.c28e9876.css.map": "/travelever/static/css/main.c28e9876.css.map",
-    "main.a1d597b4.js.map": "/travelever/static/js/main.a1d597b4.js.map"
+    "main.1ca3c552.css.map": "/travelever/static/css/main.1ca3c552.css.map",
+    "main.0063596d.js.map": "/travelever/static/js/main.0063596d.js.map"
   },
   "entrypoints": [
-    "static/css/main.c28e9876.css",
-    "static/js/main.a1d597b4.js"
+    "static/css/main.1ca3c552.css",
+    "static/js/main.0063596d.js"
   ]
 }
