@@ -1,13 +1,26 @@
 .header { 
     background: radial-gradient(circle, rgba(83,90,218,1) 0%, rgba(3,62,93,1) 100%);
-    min-height: 70px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.header__logo {
+    width: 50px;
+    height: 50px;
 }
 
 .menu {
     width: 500px;
-    margin: 0 auto;
-    height: 100%;    
-    padding-top: 18px;
 }
 
 .menu__list {

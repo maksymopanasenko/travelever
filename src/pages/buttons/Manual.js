@@ -14,8 +14,6 @@ const countriesData = getData();
 const allCountries = [...countriesData.asia, ...countriesData.africa, ...countriesData.europe, ...countriesData.america, ...countriesData.oceania];
 
 function Manual({selectedValue}) {
-
-    // console.log(selectedValue);
     const [data, setData] = useState([]);
     const [fullData, setFullData] = useState([]);
     const [initialData, setInitialData] = useState(allCountries);

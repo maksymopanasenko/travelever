@@ -1,18 +1,7 @@
-@import 'reset.css';
-
 .app {
     min-height: 100vh;
     text-align: center;
     overflow-y: scroll;
-    background: url('./resources/img/map-bg.jpg') center/cover no-repeat;
-}
-
-.page__content {
-    min-height: calc(100vh - 120px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: url('./resources/img/bg/tourist-supplies-green.webp') center center/cover no-repeat;
 }
 
 h1 {    
