@@ -15,7 +15,7 @@ import Footer from './Footer';
 import './App.css';
 
 function App() {
-    const [selectedValue, setSelectedValue] = useState("krak");
+    const [selectedValue, setSelectedValue] = useState("krak,Krakow");
 
     const handleSelectChange = (e) => {
       setSelectedValue(e.target.value);

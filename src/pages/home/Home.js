@@ -1,8 +1,19 @@
 import { Outlet, Link } from "react-router-dom";
 
+import getData from "../../db/db";
 import './Home.css';
 
+const citiesData = getData();
+const allCities = [...citiesData.asia, ...citiesData.africa, ...citiesData.europe, ...citiesData.america, ...citiesData.oceania];
+
 function Home({handleSelectChange, selectedValue}) {
+
+    const data = allCities.map(country => {
+        const {id, flightId, city} = country;
+        return (
+            <option key={id} value={[flightId, city]}>{city}</option>
+        )
+    })
 
     return (
         <div className="page__content">
@@ -13,11 +24,8 @@ function Home({handleSelectChange, selectedValue}) {
                 <h3 className="journey">Choose the destination of your next journey</h3>
 
                 <label htmlFor="cities" className="cities__label">Your location:</label>
-                <select name="location" id="cities" value={selectedValue} onChange={handleSelectChange} required>
-                    <option value="krak">Krakow</option>
-                    <option value="pari">Paris</option>
-                    <option value="bud">Budapest</option>
-                    <option value="ber">Berlin</option>
+                <select name="location" id="cities" value={selectedValue} onChange={handleSelectChange}>
+                    {data}
                 </select>
                 
                 <Link to='/start'>

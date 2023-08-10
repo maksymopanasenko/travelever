@@ -215,7 +215,7 @@ function Manual({selectedValue}) {
             <section className='manual__content'>
                 <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
-                    <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
+                    <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} selectedValue={selectedValue} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
                     <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite} onShowCard={onShowCard}/>
                 </div>
             </section>
