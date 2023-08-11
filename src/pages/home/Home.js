@@ -24,9 +24,8 @@ function Home({handleSelectChange, selectedValue}) {
                 <h3 className="journey">Choose the destination of your next journey</h3>
 
                 <label htmlFor="cities" className="cities__label">Your location:</label>
-                <select name="location" id="cities" value={selectedValue} onChange={handleSelectChange}>
-                    {data}
-                </select>
+
+                <Select selectedValue={selectedValue} onSelectChange={handleSelectChange} data={data}/>
                 
                 <Link to='/start'>
                     <button className="main__btn">Get started!</button>
@@ -38,4 +37,11 @@ function Home({handleSelectChange, selectedValue}) {
     )
 }
 
+const Select = ({selectedValue, data, onSelectChange}) => {
+    // const [handleSelectChange, onRotate] = onSelectChange
+    return <select name="location" id="cities" value={selectedValue} onChange={onSelectChange}>{data}</select>
+}
+
 export default Home;
+export {Select};
+

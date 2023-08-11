@@ -13,7 +13,7 @@ import './Manual.css';
 const countriesData = getData();
 const allCountries = [...countriesData.asia, ...countriesData.africa, ...countriesData.europe, ...countriesData.america, ...countriesData.oceania];
 
-function Manual({selectedValue}) {
+function Manual({handleSelectChange, selectedValue}) {
     const [data, setData] = useState([]);
     const [fullData, setFullData] = useState([]);
     const [initialData, setInitialData] = useState(allCountries);
@@ -75,6 +75,13 @@ function Manual({selectedValue}) {
 
         setChunk(10);
     }, [europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]);
+
+    const newData = allCountries.map(country => {
+        const {id, flightId, city} = country;
+        return (
+            <option key={id} value={[flightId, city]}>{city}</option>
+        )
+    })
   
     const handleAllChange = (e) => {
         const { checked } = e.target;
@@ -215,7 +222,7 @@ function Manual({selectedValue}) {
             <section className='manual__content'>
                 <Search onSearch={onUpdateSearch}/>
                 <div className="manual__window">
-                    <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange} selectedValue={selectedValue} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
+                    <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange}  handleSelectChange={handleSelectChange} data={newData} selectedValue={selectedValue} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
                     <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite} onShowCard={onShowCard}/>
                 </div>
             </section>

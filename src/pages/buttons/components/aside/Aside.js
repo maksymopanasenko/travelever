@@ -1,9 +1,26 @@
 import { FilterContinent, FilterByPopularity } from '../filter-panel/FilterPanel';
+import {Select} from '../../../home/Home';
 
-import '../StyleBlocks.css';
+import './Aside.css';
+import { useState } from 'react';
 
-const Aside = ({selectedValue, onSort, handleAllChange, handleCountryChange, status}) => {
+const Aside = ({selectedValue, data, handleSelectChange, onSort, handleAllChange, handleCountryChange, status}) => {
+    const [stat, setStat] = useState(false);
     const cityName = selectedValue.split(',').slice(1);
+    
+    function changeToTrue() {
+        setStat(true);
+    }
+
+    function changeToFalse() {
+        setStat(false);
+    }
+
+    function multiChange(e) {
+        handleSelectChange(e);
+        changeToFalse();
+    }
+
     return (
         <div className="aside">
             <div className="aside__panel">
@@ -12,9 +29,22 @@ const Aside = ({selectedValue, onSort, handleAllChange, handleCountryChange, sta
             </div>
             
             <div className="aside__location">
-                <p className='aside__text'>Your location: <span className='aside__city'>{cityName}</span></p>
+                    {
+                        stat ?
+                        <Select onSelectChange={multiChange} data={data} selectedValue={selectedValue}/> :
+                        <CityName cityName={cityName} changeToTrue={changeToTrue}/>
+                    }
             </div>
         </div>
+    )
+}
+
+const CityName = ({cityName, changeToTrue}) => {
+    return (
+        <>
+            <span className='aside__city'>{cityName}</span>
+            <button className="aside__btn" onClick={changeToTrue}>Change location</button>
+        </>
     )
 }
 

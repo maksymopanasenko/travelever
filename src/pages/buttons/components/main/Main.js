@@ -1,6 +1,6 @@
 import MainItem from '../main-item/MainItem';
 
-import '../StyleBlocks.css';
+import './Main.css';
 
 function Button({onUpdateList}) {
     return <button onClick={onUpdateList} className='main__more'>Load more...</button>

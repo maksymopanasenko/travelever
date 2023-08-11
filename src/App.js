@@ -15,7 +15,7 @@ import Footer from './Footer';
 import './App.css';
 
 function App() {
-    const [selectedValue, setSelectedValue] = useState("krak,Krakow");
+    const [selectedValue, setSelectedValue] = useState("bkkt,Bangkok");
 
     const handleSelectChange = (e) => {
       setSelectedValue(e.target.value);
@@ -32,7 +32,7 @@ function App() {
                         <Route path="projects" element={<Projects />} />
                         <Route path="contact" element={<Contact />} />
                         
-                        <Route path="start" element={<Manual selectedValue={selectedValue}/>} />
+                        <Route path="start" element={<Manual selectedValue={selectedValue} handleSelectChange={handleSelectChange}/>} />
 
                         <Route path="*" element={<NoPage />} />
                     </Route>

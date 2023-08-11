@@ -38,9 +38,9 @@ export default function getData() {
             ],
             asia: [
                 {img: bangkok, city: "Bangkok", point: 10, country: "Thailand", characteristics: {price: 1, safety: 2, attraction: 3}, favorite: false, flightId: 'bkkt', id: '1as'},
-                {img: dubai, city: "Dubai", point: 10, country: "UAE", characteristics: {price: 3, safety: 3, attraction: 2}, favorite: false, flightId: 'dxba', id: '2as'},
                 {img: india, city: "Agra", point: 8, country: "India", characteristics: {price: 1, safety: 1, attraction: 2}, favorite: false, flightId: 'agr', id: '3as'},
                 {img: singapore, city: "Singapore", point: 9, country: "Singapore", characteristics: {price: 3, safety: 3, attraction: 2}, favorite: false, flightId: 'sin', id: '4as'},
+                {img: dubai, city: "Dubai", point: 10, country: "UAE", characteristics: {price: 3, safety: 3, attraction: 2}, favorite: false, flightId: 'dxba', id: '2as'},
                 {img: tokyo, city: "Tokyo", point: 8, country: "Japan", characteristics: {price: 3, safety: 3, attraction: 2}, favorite: false, flightId: 'tyoa', id: '5as'},
                 {img: mumbai, city: "Mumbai", point: 6, country: "India", characteristics: {price: 1, safety: 1, attraction: 2}, favorite: false, flightId: 'bom', id: '6as'},
                 {img: seoul, city: "Seoul", point: 7, country: "South Korea", characteristics: {price: 2, safety: 3, attraction: 2}, favorite: false, flightId: 'sela', id: '7as'},

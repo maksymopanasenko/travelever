@@ -27,27 +27,3 @@
     color: #fff;
     text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000;
 }
-
-.aside {
-    width: 30%;
-    position: sticky;
-    top: 20px;
-    height: 400px;
-}
-
-.aside__panel {
-    background: #fffdfd;
-    box-shadow: 6px 6px 5px rgb(54, 54, 54);
-    padding: 15px;
-    padding-bottom: 25px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.aside__city {
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000;
-}
