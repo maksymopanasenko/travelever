@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/travelever/static/css/main.1ca3c552.css",
-    "main.js": "/travelever/static/js/main.0063596d.js",
+    "main.css": "/travelever/static/css/main.3741be02.css",
+    "main.js": "/travelever/static/js/main.9e320fe6.js",
     "static/media/wallpaperbetter.webp": "/travelever/static/media/wallpaperbetter.e51c1213e7de75d97163.webp",
     "static/media/map-bg.jpg": "/travelever/static/media/map-bg.f823296917fcb521334b.jpg",
     "static/media/sydney.jpg": "/travelever/static/media/sydney.5dab4366a4390174b87e.jpg",
@@ -31,11 +31,11 @@
     "static/media/star-active.png": "/travelever/static/media/star-active.f994a89a7495d9471646.png",
     "static/media/star.png": "/travelever/static/media/star.19ecda2f97b8e9dc5aa8.png",
     "index.html": "/travelever/index.html",
-    "main.1ca3c552.css.map": "/travelever/static/css/main.1ca3c552.css.map",
-    "main.0063596d.js.map": "/travelever/static/js/main.0063596d.js.map"
+    "main.3741be02.css.map": "/travelever/static/css/main.3741be02.css.map",
+    "main.9e320fe6.js.map": "/travelever/static/js/main.9e320fe6.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ca3c552.css",
-    "static/js/main.0063596d.js"
+    "static/css/main.3741be02.css",
+    "static/js/main.9e320fe6.js"
   ]
 }
