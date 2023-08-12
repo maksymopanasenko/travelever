@@ -10,7 +10,7 @@ function Choise({term}) {
     return <p className='main__choise'>{term.length === 0 ? "Please select the desired continents to search for." : "Nothing found. Try changing filters or changing the data you entered."}</p>
 }
 
-const Main = ({data, fullData, term, onUpdateList, onSwitchFavorite, onShowCard}) => {
+const Main = ({data, favorites, fullData, term, onUpdateList, onSwitchFavorite, onShowCard}) => {
 
     const elements = data.map(item => {
         const {id, ...itemProps} = item;
@@ -20,13 +20,19 @@ const Main = ({data, fullData, term, onUpdateList, onSwitchFavorite, onShowCard}
         )
     });
 
+    console.log(favorites);
+
     return (
         <div className="main">
             <ul>
                 {data.length !== 0 ? elements : <Choise term={term}/>}
             </ul>
 
-            {data.length >= 5  && data.length < fullData.length ? <Button onUpdateList={onUpdateList}/> : null}
+            {
+                (!favorites && data.length > 0) || (data.length >= 5  && data.length < fullData.length && !favorites) ?
+               <Button onUpdateList={onUpdateList}/> :
+               null
+            }
         </div>
     );
 }

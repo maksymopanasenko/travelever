@@ -4,7 +4,7 @@ import favorite from '../../../../resources/icons/favorite.png';
 import search from '../../../../resources/icons/search.png';
 import './Search.css';
 
-function Search({onSearch}) {
+function Search({onSearch, onShowFavorites}) {
     const [term, setTerm] = useState('');
 
     function onUpdateSearch(e) {
@@ -27,7 +27,7 @@ function Search({onSearch}) {
                         onChange={onUpdateSearch}/>
                 </div>
             </div>
-            <button className="manual__favorite">
+            <button className="manual__favorite" onClick={onShowFavorites}>
                 <img src={favorite} alt="star" />
                 Favorites
             </button>

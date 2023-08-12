@@ -28,6 +28,7 @@ function Manual({handleSelectChange, selectedValue}) {
     const [americaChecked, setAmericaChecked] = useState(true);
     const [oceaniaChecked, setOceaniaChecked] = useState(true);
     const [card, setCard] = useState(null);
+    const [favorite, setFavorite] = useState(false);
 
     useEffect(() => {
         setChunk(10);
@@ -73,6 +74,7 @@ function Manual({handleSelectChange, selectedValue}) {
             setAllChecked(true);
         }
 
+        setFavorite(false);
         setChunk(10);
     }, [europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]);
 
@@ -91,43 +93,44 @@ function Manual({handleSelectChange, selectedValue}) {
         setAfricaChecked(checked);
         setAmericaChecked(checked);
         setOceaniaChecked(checked);
+        setFavorite(false);
     };
   
     const handleCountryChange = (e) => {
       const { name, checked } = e.target;
       switch (name) {
         case 'europe':
-          setEuropeChecked(checked);
-          if (!checked) {
-            setAllChecked(false);
-          }
-          break;
+            setEuropeChecked(checked);
+            if (!checked) {
+                setAllChecked(false);
+            }
+            break;
         case 'asia':
-          setAsiaChecked(checked);
-          if (!checked) {
-            setAllChecked(false);
-          }
-          break;
+            setAsiaChecked(checked);
+            if (!checked) {
+                setAllChecked(false);
+            }
+            break;
         case 'africa':
-          setAfricaChecked(checked);
-          if (!checked) {
-            setAllChecked(false);
-          }
-          break;
+            setAfricaChecked(checked);
+            if (!checked) {
+                setAllChecked(false);
+            }
+            break;
         case 'america':
-          setAmericaChecked(checked);
-          if (!checked) {
-            setAllChecked(false);
-          }
-          break;
+            setAmericaChecked(checked);
+            if (!checked) {
+                setAllChecked(false);
+            }
+            break;
         case 'oceania':
-          setOceaniaChecked(checked);
-          if (!checked) {
-            setAllChecked(false);
-          }
-          break;
-          default:
-          break;
+            setOceaniaChecked(checked);
+            if (!checked) {
+                setAllChecked(false);
+            }
+            break;
+            default:
+            break;
       }
     };
 
@@ -214,16 +217,22 @@ function Manual({handleSelectChange, selectedValue}) {
         setInitialData(newFullData);
     }
 
+    function onShowFavorites() {
+        const favorites = initialData.filter(item => item.favorite);
+        setFavorite(true);
+        setData(favorites);
+    }
+
     const searchedData = searchCity(data, term);
 
     return  (
         <main className="manual">
             <Overlay cardData={card} onClose={onClose} selectedValue={selectedValue}/>
             <section className='manual__content'>
-                <Search onSearch={onUpdateSearch}/>
+                <Search onSearch={onUpdateSearch} onShowFavorites={onShowFavorites}/>
                 <div className="manual__window">
                     <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange}  handleSelectChange={handleSelectChange} data={newData} selectedValue={selectedValue} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
-                    <Main data={searchedData} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite} onShowCard={onShowCard}/>
+                    <Main data={searchedData} favorites={favorite} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite} onShowCard={onShowCard}/>
                 </div>
             </section>
         </main>
