@@ -20,8 +20,6 @@ const Main = ({data, favorites, fullData, term, onUpdateList, onSwitchFavorite, 
         )
     });
 
-    console.log(favorites);
-
     return (
         <div className="main">
             <ul>
