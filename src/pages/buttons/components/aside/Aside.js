@@ -7,8 +7,6 @@ import { useState } from 'react';
 const Aside = ({selectedValue, data, handleSelectChange, onSort, handleAllChange, handleCountryChange, status}) => {
     const [stat, setStat] = useState(false);
     const cityName = selectedValue.split(',').slice(1);
-
-    console.log(handleSelectChange);
     
     function changeToTrue() {
         setStat(true);

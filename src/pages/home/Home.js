@@ -8,7 +8,6 @@ const allCities = [...citiesData.asia, ...citiesData.africa, ...citiesData.europ
 
 function Home({handleSelectChange, selectedValue}) {
 
-    console.log(selectedValue);
     const data = allCities.map(country => {
         const {id, flightId, city} = country;
         return (
@@ -39,7 +38,6 @@ function Home({handleSelectChange, selectedValue}) {
 }
 
 function Select({selectedValue, data, onSelectChange}) {
-    console.log(onSelectChange);
     return <select name="location" id="cities" value={selectedValue} onChange={onSelectChange}>{data}</select>
 }
 

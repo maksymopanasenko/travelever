@@ -15,10 +15,9 @@ import Footer from './Footer';
 import './App.css';
 
 function App() {
-    const [selectedValue, setSelectedValue] = useState("krak,Krakow");
+    const [selectedValue, setSelectedValue] = useState("agr,Agra");
 
     const handleSelectChange = (e) => {
-        console.log('fired');
       setSelectedValue(e.target.value);
     };
 
@@ -27,8 +26,8 @@ function App() {
             <div className='app'>
                 <Routes>                  
                     <Route path='/' element={<Layout />}>
-                        <Route index element={<Home/>} />
-                        <Route path='travelever' element={<Home  selectedValue={selectedValue} handleSelectChange={handleSelectChange}/>} />
+                        <Route index element={<Home selectedValue={selectedValue} handleSelectChange={handleSelectChange}/>} />
+                        <Route path='travelever' element={<Home selectedValue={selectedValue} handleSelectChange={handleSelectChange}/>} />
                         <Route path="about" element={<About />} />
                         <Route path="projects" element={<Projects />} />
                         <Route path="contact" element={<Contact />} />

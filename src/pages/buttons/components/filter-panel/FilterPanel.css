@@ -7,17 +7,17 @@
 }
 
 .filter__options {
-    margin-top: 10px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    width: 190px;
+  margin-top: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 190px;
 }
 
 label {
-    display: inline-block;
-  }
+  display: inline-block;
+}
   
-  input {
-    margin-right: 10px;
-  }
+.filter__input {
+  margin-right: 10px;
+}
