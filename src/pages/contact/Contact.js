@@ -1,5 +1,10 @@
 import './Contact.css';
 
+import email from '../../resources/icons/contact/envelope.png';
+import phone from '../../resources/icons/contact/telephone.png';
+import building from '../../resources/icons/contact/building.png';
+import clock from '../../resources/icons/contact/wall-clock.png';
+
 function Contact() {
     return (
         <div className="contact">
@@ -17,11 +22,11 @@ function Contact() {
                 <div className="contact__box">
                     <div className="contact__info">
                         <h2 className="contact__info-title">Info</h2>
-                        <ul>
-                            <li><a href="mailto:info@getintouch.we" className="contact__link">info@getintouch.we</a></li>
-                            <li><a href="tel:+245689146" className="contact__link">+24 56 89 146</a></li>
-                            <li><span>14 Greenroad St.</span></li>
-                            <li><span>9:00-18:00</span></li>
+                        <ul  className='contact__info-list'>
+                            <li className='contact__info-item'><img src={email} alt="email" width='20px' height='20px'/><a href="mailto:info@getintouch.we" className="contact__link">info@getintouch.we</a></li>
+                            <li className='contact__info-item'><img src={phone} alt="email" width='20px' height='20px'/><a href="tel:+245689146" className="contact__link">+24 56 89 146</a></li>
+                            <li className='contact__info-item'><img src={building} alt="email" width='20px' height='20px'/><span>14 Greenroad St.</span></li>
+                            <li className='contact__info-item'><img src={clock} alt="email" width='20px' height='20px'/><span>9:00-18:00</span></li>
                         </ul>
                     </div>
                 </div>

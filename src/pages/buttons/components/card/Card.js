@@ -22,7 +22,7 @@ const Card = ({choosedCard}) => {
                     <div className="card__wrapper">
                         <Chars characteristics={characteristics}/>
                         <p className='card__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro quae quo numquam repellendus pariatur sint hic dolorum voluptatibus accusantium magni ullam officiis, sit voluptate et nihil, quas ipsa velit.</p>
-                        <a href={'https://www.skyscanner.pl/transport/loty/' + cityId + '/' + flightId + '/?adultsv2=1&cabinclass=economy&childrenv2=&ref=home&rtn=0&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false&oym=230' + currMonth + '&qp_prevScreen=HOMEPAGE&selectedoday=08'} target='blank' className="card__btn">View flights</a>
+                        <a href={'https://www.skyscanner.pl/transport/loty/' + cityId + '/' + flightId + '/?adultsv2=1&cabinclass=economy&childrenv2=&currency=USD&inboundaltsenabled=false&locale=en-GB&outboundaltsenabled=false&oym=' + currMonth + '&qp_prevScreen=HOMEPAGE&selectedoday=08'} target='blank' className="card__btn">View flights</a>
                         <a href='https://www.booking.com/' target='blank' className="card__btn">View hotels</a>
                     </div>
                 </div>
