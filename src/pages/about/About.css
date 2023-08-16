@@ -1,0 +1,43 @@
+.about {
+    background: #88e1ff;
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    padding: 70px 0 50px;
+}
+
+.about__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #ffff00;
+    text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
+}
+
+.about__paragraph {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.accordion__item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.accordion__header {
+    background-color: #f4f4f4;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion__content {
+    display: none;
+    padding: 10px;
+    background: rgba(255, 253, 253, 0.5);
+}

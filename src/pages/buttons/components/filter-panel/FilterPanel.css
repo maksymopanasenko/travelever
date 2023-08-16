@@ -4,6 +4,7 @@
 
 .filter__title {
   font-size: 18px;
+  font-weight: 500;
 }
 
 .filter__options {
@@ -11,6 +12,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  gap: 4px;
   width: 190px;
 }
 

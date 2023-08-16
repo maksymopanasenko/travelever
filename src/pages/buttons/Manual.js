@@ -10,7 +10,7 @@ import getData from '../../db/db';
 
 import './Manual.css';
 
-const countriesData = getData();
+const countriesData = getData().travelOptions;
 const allCountries = [...countriesData.asia, ...countriesData.africa, ...countriesData.europe, ...countriesData.america, ...countriesData.oceania];
 
 function Manual({handleSelectChange, selectedValue}) {

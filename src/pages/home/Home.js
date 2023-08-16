@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import getData from "../../db/db";
 import './Home.css';
 
-const citiesData = getData();
+const citiesData = getData().travelOptions;
 const allCities = [...citiesData.asia, ...citiesData.africa, ...citiesData.europe, ...citiesData.america, ...citiesData.oceania];
 
 function Home({handleSelectChange, selectedValue}) {
