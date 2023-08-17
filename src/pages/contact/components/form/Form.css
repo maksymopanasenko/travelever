@@ -1,0 +1,36 @@
+.contact__form-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffff00;
+    text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
+}
+
+.contact__form-text {
+    color: #505050;
+    margin-bottom: 20px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+}
+
+.contact__form>input {
+    border: none;
+    border-bottom: 1px solid #505050;
+    outline-color: #505050;
+    padding: 7px;
+}
+
+.contact__btn {
+    background-color: rgba(83,90,218,1);
+    box-shadow: 0px 0px 4px black;
+    color: #fff;
+    padding: 10px 5px;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-size: 18px;
+}

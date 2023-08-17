@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
+import Form from './components/form/Form';
+import Modal from './components/modal/Modal';
 import './Contact.css';
 
 import email from '../../resources/icons/contact/envelope.png';
@@ -6,18 +10,27 @@ import building from '../../resources/icons/contact/building.png';
 import clock from '../../resources/icons/contact/wall-clock.png';
 
 function Contact() {
+    const [modalToggle, setModalToggle] = useState(false);
+
+    const onSendData = (e) => {
+        e.preventDefault();
+        e.target.reset();
+
+        setModalToggle(m => !m);
+    }
+
+    const closeModal = () => {
+        setModalToggle(m => !m);
+    }
+
     return (
         <div className="contact">
+            {modalToggle ? <Modal closeModal={closeModal}/> : null}
             <div className="contact__body">
                 <div className="contact__box">
                     <h2 className="contact__form-title">Contact Us</h2>
                     <p className="contact__form-text">Feel free to contact us anytime. We will get back to you as soon as we can</p>
-                    <form className="contact__form">
-                        <input type="text" name="name" placeholder='Name'/>
-                        <input type="email" name="email" placeholder='E-mail'/>
-                        <input type="text" name="msg" placeholder='Message'/>
-                        <button className='contact__btn'>Send</button>
-                    </form>
+                    <Form onSendData={onSendData}/>
                 </div>
                 <div className="contact__box">
                     <div className="contact__info">
