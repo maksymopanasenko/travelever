@@ -169,6 +169,8 @@ function Manual({handleSelectChange, selectedValue}) {
 
     function searchCity(items, term) {
         if (term.length === 0) return items;
+
+        const processedData = favorite ? data : fullData;
         
         const englishLettersRegex = /^[A-Za-z]+$/;
 
@@ -177,7 +179,7 @@ function Manual({handleSelectChange, selectedValue}) {
             return items;
         }
 
-        return fullData.filter(item => {
+        return processedData.filter(item => {
 
             let matchPattern = new RegExp(`^${term}`, 'gi');
 
@@ -223,16 +225,21 @@ function Manual({handleSelectChange, selectedValue}) {
         setData(favorites);
     }
 
+    function onShowAll() {
+        setFavorite(false);
+        setData(fullData.slice(0, 5));
+    }
+
     const searchedData = searchCity(data, term);
 
     return  (
         <main className="manual">
             <Overlay cardData={card} onClose={onClose} selectedValue={selectedValue}/>
             <section className='manual__content'>
-                <Search onSearch={onUpdateSearch} onShowFavorites={onShowFavorites}/>
+                <Search onSearch={onUpdateSearch} onShowFavorites={onShowFavorites} onShowAll={onShowAll}/>
                 <div className="manual__window">
-                    <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange}  handleSelectChange={handleSelectChange} data={newData} selectedValue={selectedValue} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
-                    <Main data={searchedData} favorites={favorite} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite} onShowCard={onShowCard}/>
+                    <Aside onSort={onSortByPopularity} handleAllChange={handleAllChange} handleCountryChange={handleCountryChange}  handleSelectChange={handleSelectChange} data={newData} favorite={favorite} selectedValue={selectedValue} status={[allChecked, europeChecked, asiaChecked, africaChecked, americaChecked, oceaniaChecked]}/>
+                    <Main data={searchedData} favorite={favorite} term={term} fullData={fullData} onUpdateList={onUpdateList} onSwitchFavorite={onSwitchFavorite} onShowCard={onShowCard}/>
                 </div>
             </section>
         </main>

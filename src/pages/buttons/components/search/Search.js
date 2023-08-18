@@ -2,9 +2,11 @@ import { useState } from 'react';
 
 import favorite from '../../../../resources/icons/favorite.png';
 import search from '../../../../resources/icons/search.png';
+import globe from '../../../../resources/icons/globe.png';
+
 import './Search.css';
 
-function Search({onSearch, onShowFavorites}) {
+function Search({onSearch, onShowFavorites, onShowAll}) {
     const [term, setTerm] = useState('');
 
     function onUpdateSearch(e) {
@@ -27,10 +29,16 @@ function Search({onSearch, onShowFavorites}) {
                         onChange={onUpdateSearch}/>
                 </div>
             </div>
-            <button className="manual__favorite" onClick={onShowFavorites}>
-                <img src={favorite} alt="star" />
-                Favorites
-            </button>
+            <div className="manual__btns">
+                <button className="manual__favorite" onClick={onShowFavorites}>
+                    <img src={favorite} alt="star" />
+                    Favorites
+                </button>
+                <button className="manual__favorite" id='all' onClick={onShowAll}>
+                    <img src={globe} alt="star" />
+                    All
+                </button>
+            </div>
         </div>
     )
 }

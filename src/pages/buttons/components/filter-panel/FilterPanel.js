@@ -2,7 +2,6 @@ import './FilterPanel.css';
 
 
 const FilterContinent = ({handleAllChange, handleCountryChange, status}) => {
-
     return (
         <div className="filter__continent">
             <h3 className="filter__title">Continents</h3>
