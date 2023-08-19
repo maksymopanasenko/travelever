@@ -219,15 +219,30 @@ function Manual({handleSelectChange, selectedValue}) {
         setInitialData(newFullData);
     }
 
-    function onShowFavorites() {
+    function onShowFavorites(e) {
         const favorites = initialData.filter(item => item.favorite);
         setFavorite(true);
         setData(favorites);
+        
+        if (e.target.tagName === 'BUTTON') {
+            e.target.nextElementSibling.style.cssText = 'width: 100%; overflow: visible'
+            e.target.style.cssText = 'width: 0; overflow: hidden'
+        } else {
+            e.target.parentElement.nextElementSibling.style.cssText = 'width: 100%; overflow: visible'
+            e.target.parentElement.style.cssText = 'width: 0; overflow: hidden'
+        }
     }
 
-    function onShowAll() {
+    function onShowAll(e) {
         setFavorite(false);
         setData(fullData.slice(0, 5));
+        if (e.target.tagName === 'BUTTON') {
+            e.target.previousElementSibling.style.cssText = 'width: 100%; overflow: visible'
+            e.target.style.cssText = 'width: 0; overflow: hidden'
+        } else {
+            e.target.parentElement.previousElementSibling.style.cssText = 'width: 100%; overflow: visible'
+            e.target.parentElement.style.cssText = 'width: 0; overflow: hidden'
+        }        
     }
 
     const searchedData = searchCity(data, term);

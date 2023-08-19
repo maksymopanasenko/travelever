@@ -30,7 +30,7 @@ function Search({onSearch, onShowFavorites, onShowAll}) {
                 </div>
             </div>
             <div className="manual__btns">
-                <button className="manual__favorite" onClick={onShowFavorites}>
+                <button className="manual__favorite" id='favorite' onClick={onShowFavorites}>
                     <img src={favorite} alt="star" />
                     Favorites
                 </button>

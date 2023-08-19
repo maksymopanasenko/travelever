@@ -23,23 +23,37 @@
 
 .manual__btns {
     display: flex;
-    gap: 14px;
+    width: 90px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 5px;
+    box-shadow: 0 0 3px #000000, 0 0 3px #000000;
 }
 
 .manual__favorite {
     display: flex;
     justify-content: center;
-    width: 84px;
+    width: 100%;
     gap: 5px;
     align-items: center;
-    border-radius: 5px;
     height: 27px;
     background: rgb(83, 90, 218);
     color: #fff;
-    box-shadow: 0 0 3px #000000, 0 0 3px #000000;
     text-shadow: 1px 1px 3px black;
     font-size: 12px;
+    transition: .7s;
 }
+
+#favorite {
+    width: 100%;
+}
+
+#all {
+    width: 0;
+    overflow: hidden;
+    /* border-radius: 0 5px 5px 0; */
+}
+
 
 .manual__favorite img {
     width: 24px;
