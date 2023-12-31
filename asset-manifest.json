@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/travelever/static/css/main.1d9df8d2.css",
-    "main.js": "/travelever/static/js/main.678a2a4a.js",
+    "main.css": "/travelever/static/css/main.d9965d4b.css",
+    "main.js": "/travelever/static/js/main.533c1f00.js",
     "static/media/wallpaperbetter.webp": "/travelever/static/media/wallpaperbetter.e51c1213e7de75d97163.webp",
     "static/media/map-bg.jpg": "/travelever/static/media/map-bg.f823296917fcb521334b.jpg",
     "static/media/sydney.jpg": "/travelever/static/media/sydney.5dab4366a4390174b87e.jpg",
@@ -22,20 +22,20 @@
     "static/media/agra.jpg": "/travelever/static/media/agra.579b29155c5f0dcfb3e7.jpg",
     "static/media/de.jpg": "/travelever/static/media/de.548e93306dfd8099645f.jpg",
     "static/media/krakow.jpg": "/travelever/static/media/krakow.8ec94c68ab4eda8e8f4b.jpg",
+    "static/media/globe.png": "/travelever/static/media/globe.cb12cdb593dee097e729.png",
     "static/media/athens.jpg": "/travelever/static/media/athens.260e3d7239713ead17ff.jpg",
     "static/media/cairo.jpg": "/travelever/static/media/cairo.c0c6d5b2e456deb17546.jpg",
     "static/media/nyc.jpg": "/travelever/static/media/nyc.2f3519c617c49ec0b204.jpg",
     "static/media/favorite.png": "/travelever/static/media/favorite.8e9cf0758df8ce5c6916.png",
     "static/media/london.jpg": "/travelever/static/media/london.76f23e639583a5ae49e3.jpg",
-    "static/media/globe.png": "/travelever/static/media/globe.cb12cdb593dee097e729.png",
     "static/media/star-active.png": "/travelever/static/media/star-active.f994a89a7495d9471646.png",
     "static/media/star.png": "/travelever/static/media/star.19ecda2f97b8e9dc5aa8.png",
     "index.html": "/travelever/index.html",
-    "main.1d9df8d2.css.map": "/travelever/static/css/main.1d9df8d2.css.map",
-    "main.678a2a4a.js.map": "/travelever/static/js/main.678a2a4a.js.map"
+    "main.d9965d4b.css.map": "/travelever/static/css/main.d9965d4b.css.map",
+    "main.533c1f00.js.map": "/travelever/static/js/main.533c1f00.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d9df8d2.css",
-    "static/js/main.678a2a4a.js"
+    "static/css/main.d9965d4b.css",
+    "static/js/main.533c1f00.js"
   ]
 }
